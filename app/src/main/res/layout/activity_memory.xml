@@ -1,0 +1,231 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.22"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/intents"
+            android:id="@+id/textView7"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/intents"
+            android:layout_gravity="center"
+            android:text="0"
+            android:layout_marginLeft="30dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.196"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card1"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card2"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card3"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card4"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.196"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card5"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card6"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card7"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card8"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.196"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card9"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card10"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card11"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card12"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.196"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card13"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card14"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card15"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_height="match_parent"
+            android:id="@+id/card16"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="0.25dp" />
+    </LinearLayout>
+
+</LinearLayout>

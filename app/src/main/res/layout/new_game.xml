@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:id="@+id/menu_new_game"
+    android:layout_height="wrap_content" >
+    <RadioGroup
+        android:id="@+id/select_baraja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/barallaJEDI"
+            android:id="@+id/radioButton"
+            android:checked="true"
+            android:layout_gravity="center_horizontal|top" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/barallaJEDIprank"
+            android:id="@+id/radioButton3"
+            android:layout_gravity="center_horizontal|bottom" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/barallaSwissKnife"
+            android:id="@+id/radioButton2"
+            android:layout_gravity="center_horizontal|bottom" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/select_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/select_baraja">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 x 4"
+            android:id="@+id/radioButton4"
+            android:checked="true"
+            android:layout_gravity="center_horizontal|top" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6 x 6"
+            android:id="@+id/radioButton5"
+            android:layout_gravity="center_horizontal|bottom" />
+    </RadioGroup>
+</RelativeLayout>

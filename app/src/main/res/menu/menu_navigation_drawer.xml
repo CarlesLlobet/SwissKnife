@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio"
+        android:title="@string/tituloHome"
+        android:icon="@mipmap/ic_swissknife"/>
+    <item
+        android:id="@+id/memory"
+        android:title="Memory"
+        android:icon="@drawable/ic_gamepad_variant_grey600_24dp"/>
+    <item
+        android:id="@+id/ranking"
+        android:title="Ranking"
+        android:icon="@drawable/ic_bank_grey600_24dp"/>
+    <item
+        android:id="@+id/calculator"
+        android:title="@string/tituloCalc"
+        android:icon="@drawable/ic_calculator_grey600_24dp"/>
+    <item
+        android:id="@+id/mediaPlayer"
+        android:title="@string/tituloMediaPlayer"
+        android:icon="@drawable/ic_music_note_grey600_24dp"/>
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_account_grey600_24dp"
+        android:title="@string/account">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:title="@string/tituloSettings"
+                android:icon="@drawable/ic_settings_grey600_24dp"/>
+            <item
+                android:id="@+id/closeSession"
+                android:title="@string/btnLogout"
+                android:icon="@drawable/ic_power_grey600_24dp"/>
+        </menu>
+    </item>
+
+</menu>
