@@ -1,7 +1,9 @@
 package xyz.carlesllobet.swissknife.UI;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -23,6 +26,8 @@ import xyz.carlesllobet.swissknife.DB.UserFunctions;
 import xyz.carlesllobet.swissknife.R;
 
 public class MediaPlayerActivity extends BaseActivity implements View.OnClickListener {
+
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
     private ImageButton btnBegin;
     private ImageButton btnStartPause;
@@ -128,8 +133,8 @@ public class MediaPlayerActivity extends BaseActivity implements View.OnClickLis
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
                 }
-                Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(intent, 0);
+                checkStoragePermissions();
+
         }
     }
 
@@ -242,5 +247,38 @@ public class MediaPlayerActivity extends BaseActivity implements View.OnClickLis
         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+    }
+
+    private void searchSong(){
+        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, 0);
+    }
+
+    private void checkStoragePermissions() {
+        int hasStoragePermissions = checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (hasStoragePermissions != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    REQUEST_CODE_ASK_PERMISSIONS);
+            return;
+        }
+        searchSong();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_CODE_ASK_PERMISSIONS:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // Permission Granted
+                    searchSong();
+                } else {
+                    // Permission Denied
+                    Toast.makeText(MediaPlayerActivity.this, "WRITE_CONTACTS Denied", Toast.LENGTH_SHORT)
+                            .show();
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 }
